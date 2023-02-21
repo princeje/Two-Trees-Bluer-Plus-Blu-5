@@ -1,3 +1,19 @@
+# HOW TO INSTALL:
+1. Clone repo and open in VSCode
+2. Install Platform.io extension
+3. Click the "☑️" in the bottom left on the blue bar at the bottom of Vscode to build the firmware
+4. If you see SUCCESS in green letters appear in the bottom terminal window you'll know everything finished sucessfully
+5. Copy `Two-Trees-Bluer-Plus-Blu-5\.pio\build\mks_robin_nano35\Robin_nano43.bin` to your SD Card
+6. Put SD card into your Bluer Plus and power on. You should see Booting.... then a green progress bar
+7. You'll know if the flash was successfull if your printer reboots and you see the Marlin Logo.
+
+
+NOTE: I've had this problem with all printers that use MKS Robin Nano v1.2 boards. While flashing, the progress bar on the printer may reach 48% or 100% and then freeze. The green progress bar only reaching half of the screen or not all the way to the other side. All you need to do is rename `ROBIN_NANO43.CUR` back to `ROBIN_NANO43.BIN`, and try again. I have had to do this up to **three times** to get it to flash completely. 
+
+Also, this build enables the serial port (under where the wifi chip goes) so that you can use this board with **Octoprint**. I've tested that it does work with a Raspberry Pi and a Libre Computer. Just Use a 115200 baud rate.
+
+One more thing, this branch is a modified version of **Marlin v2.0.9.1** if you are wondering.
+
 # Marlin 3D Printer Firmware
 
 ![GitHub](https://img.shields.io/github/license/marlinfirmware/marlin.svg)
